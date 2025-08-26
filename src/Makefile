@@ -60,10 +60,10 @@ endif
 ###
 ###
 ifeq ($(FC),gfortran)
-F90FLAGS = 
+F90FLAGS = -fopenmp
 DEBUG_FLAGS = 
-OFLAGS = -O2 -unshared
-LINKERFLAGS = 
+OFLAGS = -O2 -unshared -fopenmp
+LINKERFLAGS = -fopenmp
 endif
 
 ### ------------ define flags for nagf95, intel-linux compiler by NAG ---------
